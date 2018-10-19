@@ -2506,7 +2506,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (SettingsActivity.KEY_FEED_INTEGRATION.equals(key)) {
+        if (Homescreen.KEY_FEED_INTEGRATION.equals(key)) {
             if (mLauncherTab != null) {
                 mFeedIntegrationEnabled = isFeedIntegrationEnabled();
                 ClientOptions clientOptions = new ClientOptions(mFeedIntegrationEnabled ? 1 : 0);
