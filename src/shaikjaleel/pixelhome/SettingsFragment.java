@@ -26,7 +26,10 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
+
+import com.shaikjaleel.pixelhome.iPixelLauncher.iPixelLauncherCallbacks;
 
 import com.android.launcher3.SettingsActivity;
 import com.android.launcher3.SettingsActivity.LauncherSettingsFragment;
@@ -34,6 +37,8 @@ import com.android.launcher3.SettingsActivity.LauncherSettingsFragment;
 import java.util.Objects;
 
 public class SettingsFragment extends SettingsActivity {
+
+    public static final String KEY_MINUS_ONE = "pref_enable_minus_one";
 
     @Override
     protected PreferenceFragment getNewFragment() {
@@ -48,6 +53,12 @@ public class SettingsFragment extends SettingsActivity {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+
+            SwitchPreference minusOne = (SwitchPreference) findPreference(KEY_MINUS_ONE);
+            if (!Bits.hasPackageInstalled(getActivity(),
+                        iPixelLauncherCallbacks.SEARCH_PACKAGE)) {
+                getPreferenceScreen().removePreference(minusOne);
+            }
         }
     }
 }

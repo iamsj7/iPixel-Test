@@ -23,4 +23,11 @@
 
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="pref_show_google_now_title">Display Google app</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">To the right of the main home screen</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">To the left of the main home screen</string>
 </resources>

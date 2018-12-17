@@ -30,6 +30,12 @@
     </com.android.launcher3.views.ButtonPreference>
 
     <SwitchPreference
+        android:key="pref_enable_minus_one"
+        android:title="@string/pref_show_google_now_title"
+        android:summary="@string/pref_show_google_now_summary"
+        android:defaultValue="true" />
+
+    <SwitchPreference
         android:key="pref_add_icon_to_home"
         android:title="@string/auto_add_shortcuts_label"
         android:summary="@string/auto_add_shortcuts_description"
