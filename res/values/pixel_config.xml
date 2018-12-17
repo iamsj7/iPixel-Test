@@ -1,0 +1,6 @@
+<resources>
+
+<!-- Quickspace -->
+    <item type="id" name="reserved_container_workspace" />
+
+</resources>
