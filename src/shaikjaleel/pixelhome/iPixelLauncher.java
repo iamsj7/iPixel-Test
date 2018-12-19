@@ -28,6 +28,8 @@ import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherCallbacks;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.R;
+import com.google.android.libraries.gsa.launcherclient.ClientOptions;
+import com.google.android.libraries.gsa.launcherclient.ClientService;
 import com.google.android.libraries.gsa.launcherclient.LauncherClient;
 
 import java.io.FileDescriptor;
@@ -63,7 +65,7 @@ public class iPixelLauncher extends Launcher {
 
             SharedPreferences prefs = Utilities.getPrefs(mLauncher);
             mOverlayCallbacks = new OverlayCallbackImpl(mLauncher);
-            mLauncherClient = new LauncherClient(mLauncher, mOverlayCallbacks, getClientOptions(prefs));
+            mLauncherClient = new LauncherClient(mLauncher, mOverlayCallbacks, new ClientOptions(((prefs.getBoolean(SettingsFragment.KEY_MINUS_ONE, true) ? 1 : 0) | 2 | 4 | 8)));
             mOverlayCallbacks.setClient(mLauncherClient);
             prefs.registerOnSharedPreferenceChangeListener(this);
         }
@@ -103,7 +105,28 @@ public class iPixelLauncher extends Launcher {
 
         @Override
         public void onDestroy() {
-            mLauncherClient.onDestroy();
+            if (!mLauncherClient.isDestroyed()) {
+                mLauncherClient.getActivity().unregisterReceiver(mLauncherClient.mInstallListener);
+            }
+            mLauncherClient.setDestroyed(true);
+            mLauncherClient.getBaseService().disconnect();
+            if (mLauncherClient.getOverlayCallback() != null) {
+                mLauncherClient.getOverlayCallback().client = null;
+                mLauncherClient.getOverlayCallback().windowManager = null;
+                mLauncherClient.getOverlayCallback().window = null;
+                mLauncherClient.setOverlayCallback(null);
+            }
+            ClientService service = mLauncherClient.getClientService();
+            LauncherClient client = service.getClient();
+            if (client != null && client.equals(mLauncherClient)) {
+                service.mWeakReference = null;
+                if (!mLauncherClient.getActivity().isChangingConfigurations()) {
+                    service.disconnect();
+                    if (ClientService.sInstance == service) {
+                        ClientService.sInstance = null;
+                    }
+                }
+            }
             Utilities.getPrefs(mLauncher).unregisterOnSharedPreferenceChangeListener(this);
         }
 
@@ -123,7 +146,10 @@ public class iPixelLauncher extends Launcher {
 
         @Override
         public void onDetachedFromWindow() {
-            mLauncherClient.onDetachedFromWindow();
+            if (!mLauncherClient.isDestroyed()) {
+                mLauncherClient.getEventInfo().parse(0, "detachedFromWindow", 0.0f);
+                mLauncherClient.setParams(null);
+            }
         }
 
         @Override
@@ -159,19 +185,21 @@ public class iPixelLauncher extends Launcher {
         }
 
         @Override
-        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
             if (SettingsFragment.KEY_MINUS_ONE.equals(key)) {
-                mLauncherClient.setClientOptions(getClientOptions(sharedPreferences));
+                ClientOptions clientOptions = new ClientOptions((prefs.getBoolean(SettingsFragment.KEY_MINUS_ONE, true) ? 1 : 0) | 2 | 4 | 8);
+                if (clientOptions.options != mLauncherClient.mFlags) {
+                    mLauncherClient.mFlags = clientOptions.options;
+                    if (mLauncherClient.getParams() != null) {
+                        mLauncherClient.updateConfiguration();
+                    }
+                    mLauncherClient.getEventInfo().parse("setClientOptions ", mLauncherClient.mFlags);
+                }
             }
         }
 
-        private LauncherClient.ClientOptions getClientOptions(SharedPreferences prefs) {
-            boolean hasPackage = Bits.hasPackageInstalled(mLauncher, SEARCH_PACKAGE);
-            boolean isEnabled = prefs.getBoolean(SettingsFragment.KEY_MINUS_ONE, true);
-            return new LauncherClient.ClientOptions(hasPackage && isEnabled,
-                    true, /* enableHotword */
-                    true /* enablePrewarming */
-            );
+        private LauncherClient getClient() {
+            return mLauncherClient;
         }
     }
 }
