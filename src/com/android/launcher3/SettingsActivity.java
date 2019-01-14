@@ -38,7 +38,6 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
-import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -74,10 +73,6 @@ public class SettingsActivity extends Activity {
     private static final int DELAY_HIGHLIGHT_DURATION_MILLIS = 600;
     private static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
 
-    public static final String PREF_THEME_STYLE_KEY = "pref_theme_style";
-
-    private static boolean mRestartNeeded;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,7 +107,6 @@ public class SettingsActivity extends Activity {
 
         private String mPreferenceKey;
         private boolean mPreferenceHighlighted = false;
-        private ListPreference mThemeStyle;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -159,18 +153,6 @@ public class SettingsActivity extends Activity {
                 // Initialize the UI once
                 rotationPref.setDefaultValue(getAllowRotationDefaultValue());
             }
-
-            mThemeStyle = (ListPreference) findPreference(PREF_THEME_STYLE_KEY);
-            mThemeStyle.setSummary(mThemeStyle.getEntry());
-            mThemeStyle.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                @Override
-                public boolean onPreferenceChange(Preference preference, Object o) {
-                    String newValue = (String) o;
-                    int valueIndex = mThemeStyle.findIndexOfValue(newValue);
-                    mThemeStyle.setSummary(mThemeStyle.getEntries()[valueIndex]);
-                    return true;
-                }
-            });
 
             final ListPreference gridColumns = (ListPreference) findPreference(Utilities.GRID_COLUMNS);
             gridColumns.setSummary(gridColumns.getEntry());

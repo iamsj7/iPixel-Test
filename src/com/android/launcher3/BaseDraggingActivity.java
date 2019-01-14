@@ -65,8 +65,6 @@ public abstract class BaseDraggingActivity extends BaseActivity
 
     private DisplayRotationListener mRotationListener;
 
-    protected int mThemeStyle;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,18 +89,12 @@ public abstract class BaseDraggingActivity extends BaseActivity
     }
 
     protected int getThemeRes(WallpaperColorInfo wallpaperColorInfo) {
-        if (mThemeStyle == 1) {
-            return R.style.LauncherTheme;
-        } else if (mThemeStyle == 2) {
-            return R.style.LauncherThemeDark;
+        if (wallpaperColorInfo.isDark()) {
+            return wallpaperColorInfo.supportsDarkText() ?
+                    R.style.LauncherThemeDark_DarKText : R.style.LauncherThemeDark;
         } else {
-            if (wallpaperColorInfo.isDark()) {
-                return wallpaperColorInfo.supportsDarkText() ?
-                        R.style.LauncherThemeDark_DarKText : R.style.LauncherThemeDark;
-            } else {
-                return wallpaperColorInfo.supportsDarkText() ?
-                        R.style.LauncherTheme_DarkText : R.style.LauncherTheme;
-            }
+            return wallpaperColorInfo.supportsDarkText() ?
+                    R.style.LauncherTheme_DarkText : R.style.LauncherTheme;
         }
     }
 
