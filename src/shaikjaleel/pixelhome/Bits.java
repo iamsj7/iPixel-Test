@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.shaikjaleel.pixelhome;
+package com.shaikjaleel.pixelhome;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;

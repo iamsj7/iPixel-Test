@@ -58,7 +58,7 @@ import com.android.launcher3.util.Themes;
 import com.shaikjaleel.pixelhome.Bits;
 import com.shaikjaleel.pixelhome.iPixelLauncher.iPixelLauncherCallbacks;
 import com.shaikjaleel.pixelhome.quickspace.QuickspaceController.OnDataListener;
-import com.shaikjaleel.pixlehome.quickspace.receivers.QuickSpaceActionReceiver;
+import com.shaikjaleel.pixelhome.quickspace.receivers.QuickSpaceActionReceiver;
 import com.shaikjaleel.pixelhome.views.DateTextView;
 
 public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListener, Runnable, OnDataListener {
