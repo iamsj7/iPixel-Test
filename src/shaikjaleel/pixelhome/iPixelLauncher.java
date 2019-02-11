@@ -21,16 +21,9 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 
-import com.shaikjaleel.pixelhome.quickspace.QuickSpaceView;
-
 import com.android.launcher3.AppInfo;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherCallbacks;
-import com.android.launcher3.Utilities;
-import com.android.launcher3.R;
-import com.google.android.libraries.gsa.launcherclient.ClientOptions;
-import com.google.android.libraries.gsa.launcherclient.ClientService;
-import com.google.android.libraries.gsa.launcherclient.LauncherClient;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -47,7 +40,6 @@ public class iPixelLauncher extends Launcher {
         public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
         private final iPixelLauncher mLauncher;
-        private QuickSpaceView mQuickSpace;
 
         private OverlayCallbackImpl mOverlayCallbacks;
         private LauncherClient mLauncherClient;
@@ -60,28 +52,10 @@ public class iPixelLauncher extends Launcher {
         }
 
         @Override
-        public void onCreate(Bundle savedInstanceState) {
-            mQuickSpace = mLauncher.findViewById(R.id.reserved_container_workspace);
-
-            SharedPreferences prefs = Utilities.getPrefs(mLauncher);
-            mOverlayCallbacks = new OverlayCallbackImpl(mLauncher);
-            mLauncherClient = new LauncherClient(mLauncher, mOverlayCallbacks, new ClientOptions(((prefs.getBoolean(SettingsFragment.KEY_MINUS_ONE, true) ? 1 : 0) | 2 | 4 | 8)));
-            mOverlayCallbacks.setClient(mLauncherClient);
-            prefs.registerOnSharedPreferenceChangeListener(this);
-        }
+        public void onCreate(Bundle savedInstanceState) { }
 
         @Override
-        public void onResume() {
-            if (mQuickSpace != null) {
-                mQuickSpace.onResume();
-            }
-
-            mResumed = true;
-            if (mStarted) {
-                mAlreadyOnHome = true;
-            }
-            mLauncherClient.onResume();
-        }
+        public void onResume() { }
 
         @Override
         public void onStart() {

@@ -53,9 +53,4 @@
         <item name="android:colorControlHighlight">#DFE1E5</item>
         <item name="android:colorForeground">@color/all_apps_bg_hand_fill_dark</item>
     </style>
-
-    <!-- QuickSpace -->
-    <style name="QuickSpaceText">
-        <item name="android:fontFamily">sans-serif</item>
-    </style>
 </resources>
