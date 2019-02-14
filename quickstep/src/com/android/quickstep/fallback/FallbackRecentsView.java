@@ -21,7 +21,7 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.android.launcher3.DeviceProfile;
+import com.android.launcher3x.DeviceProfile;
 import com.android.quickstep.RecentsActivity;
 import com.android.quickstep.util.LayoutUtils;
 import com.android.quickstep.views.RecentsView;

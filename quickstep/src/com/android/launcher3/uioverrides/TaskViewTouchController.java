@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3.uioverrides;
+package com.android.launcher3x.uioverrides;
 
-import static com.android.launcher3.Utilities.SINGLE_FRAME_MS;
-import static com.android.launcher3.anim.Interpolators.scrollInterpolatorForVelocity;
+import static com.android.launcher3x.Utilities.SINGLE_FRAME_MS;
+import static com.android.launcher3x.anim.Interpolators.scrollInterpolatorForVelocity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.view.MotionEvent;
 
-import com.android.launcher3.AbstractFloatingView;
-import com.android.launcher3.BaseDraggingActivity;
-import com.android.launcher3.LauncherAnimUtils;
-import com.android.launcher3.Utilities;
-import com.android.launcher3.anim.AnimatorPlaybackController;
-import com.android.launcher3.anim.Interpolators;
-import com.android.launcher3.touch.SwipeDetector;
-import com.android.launcher3.userevent.nano.LauncherLogProto.Action.Touch;
-import com.android.launcher3.util.FlingBlockCheck;
-import com.android.launcher3.util.PendingAnimation;
-import com.android.launcher3.util.TouchController;
-import com.android.launcher3.views.BaseDragLayer;
+import com.android.launcher3x.AbstractFloatingView;
+import com.android.launcher3x.BaseDraggingActivity;
+import com.android.launcher3x.LauncherAnimUtils;
+import com.android.launcher3x.Utilities;
+import com.android.launcher3x.anim.AnimatorPlaybackController;
+import com.android.launcher3x.anim.Interpolators;
+import com.android.launcher3x.touch.SwipeDetector;
+import com.android.launcher3x.userevent.nano.LauncherLogProto.Action.Touch;
+import com.android.launcher3x.util.FlingBlockCheck;
+import com.android.launcher3x.util.PendingAnimation;
+import com.android.launcher3x.util.TouchController;
+import com.android.launcher3x.views.BaseDragLayer;
 import com.android.quickstep.OverviewInteractionState;
 import com.android.quickstep.views.RecentsView;
 import com.android.quickstep.views.TaskView;

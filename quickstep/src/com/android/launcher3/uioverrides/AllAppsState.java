@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3.uioverrides;
+package com.android.launcher3x.uioverrides;
 
-import static com.android.launcher3.LauncherAnimUtils.ALL_APPS_TRANSITION_MS;
-import static com.android.launcher3.anim.Interpolators.DEACCEL_2;
+import static com.android.launcher3x.LauncherAnimUtils.ALL_APPS_TRANSITION_MS;
+import static com.android.launcher3x.anim.Interpolators.DEACCEL_2;
 
-import com.android.launcher3.AbstractFloatingView;
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherState;
-import com.android.launcher3.allapps.AllAppsContainerView;
-import com.android.launcher3.userevent.nano.LauncherLogProto.ContainerType;
+import com.android.launcher3x.AbstractFloatingView;
+import com.android.launcher3x.Launcher;
+import com.android.launcher3x.LauncherState;
+import com.android.launcher3x.allapps.AllAppsContainerView;
+import com.android.launcher3x.userevent.nano.LauncherLogProto.ContainerType;
 
 /**
  * Definition for AllApps state

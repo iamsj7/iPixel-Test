@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3.uioverrides;
+package com.android.launcher3x.uioverrides;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Rect;
 
-import com.android.launcher3.DeviceProfile;
-import com.android.launcher3.Launcher;
-import com.android.launcher3.R;
+import com.android.launcher3x.DeviceProfile;
+import com.android.launcher3x.Launcher;
+import com.android.launcher3x.R;
 import com.android.quickstep.QuickScrubController;
 import com.android.quickstep.views.RecentsView;
 

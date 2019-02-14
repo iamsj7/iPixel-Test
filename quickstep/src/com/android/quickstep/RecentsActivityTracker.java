@@ -22,7 +22,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.android.launcher3.MainThreadExecutor;
+import com.android.launcher3x.MainThreadExecutor;
 import com.android.quickstep.ActivityControlHelper.ActivityInitListener;
 import com.android.quickstep.util.RemoteAnimationProvider;
 

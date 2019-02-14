@@ -19,8 +19,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.android.launcher3.AppInfo;
-import com.android.launcher3.LauncherCallbacks;
+import com.android.launcher3x.AppInfo;
+import com.android.launcher3x.LauncherCallbacks;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;

@@ -15,7 +15,7 @@
  */
 package com.shaikjaleel.pixelhome;
 
-import com.android.launcher3.Launcher;
+import com.android.launcher3x.Launcher;
 
 public class PixelLauncher extends Launcher {
 

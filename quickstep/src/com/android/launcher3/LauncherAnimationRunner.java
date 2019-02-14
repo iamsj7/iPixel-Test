@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3;
+package com.android.launcher3x;
 
-import static com.android.launcher3.Utilities.SINGLE_FRAME_MS;
-import static com.android.launcher3.Utilities.postAsyncCallback;
+import static com.android.launcher3x.Utilities.SINGLE_FRAME_MS;
+import static com.android.launcher3x.Utilities.postAsyncCallback;
 import static com.android.systemui.shared.recents.utilities.Utilities.postAtFrontOfQueueAsynchronously;
 
 import android.animation.Animator;

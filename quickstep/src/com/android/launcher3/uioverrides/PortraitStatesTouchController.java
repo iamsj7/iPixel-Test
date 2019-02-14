@@ -13,36 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3.uioverrides;
+package com.android.launcher3x.uioverrides;
 
-import static com.android.launcher3.LauncherState.ALL_APPS;
-import static com.android.launcher3.LauncherState.NORMAL;
-import static com.android.launcher3.LauncherState.OVERVIEW;
-import static com.android.launcher3.anim.AnimatorSetBuilder.ANIM_ALL_APPS_FADE;
-import static com.android.launcher3.anim.AnimatorSetBuilder.ANIM_OVERVIEW_FADE;
-import static com.android.launcher3.anim.AnimatorSetBuilder.ANIM_VERTICAL_PROGRESS;
-import static com.android.launcher3.anim.Interpolators.ACCEL;
-import static com.android.launcher3.anim.Interpolators.DEACCEL;
-import static com.android.launcher3.anim.Interpolators.LINEAR;
+import static com.android.launcher3x.LauncherState.ALL_APPS;
+import static com.android.launcher3x.LauncherState.NORMAL;
+import static com.android.launcher3x.LauncherState.OVERVIEW;
+import static com.android.launcher3x.anim.AnimatorSetBuilder.ANIM_ALL_APPS_FADE;
+import static com.android.launcher3x.anim.AnimatorSetBuilder.ANIM_OVERVIEW_FADE;
+import static com.android.launcher3x.anim.AnimatorSetBuilder.ANIM_VERTICAL_PROGRESS;
+import static com.android.launcher3x.anim.Interpolators.ACCEL;
+import static com.android.launcher3x.anim.Interpolators.DEACCEL;
+import static com.android.launcher3x.anim.Interpolators.LINEAR;
 
 import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.view.MotionEvent;
 import android.view.animation.Interpolator;
 
-import com.android.launcher3.AbstractFloatingView;
-import com.android.launcher3.DeviceProfile;
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherState;
-import com.android.launcher3.LauncherStateManager.AnimationComponents;
-import com.android.launcher3.allapps.AllAppsTransitionController;
-import com.android.launcher3.anim.AnimatorPlaybackController;
-import com.android.launcher3.anim.AnimatorSetBuilder;
-import com.android.launcher3.anim.Interpolators;
-import com.android.launcher3.touch.AbstractStateChangeTouchController;
-import com.android.launcher3.touch.SwipeDetector;
-import com.android.launcher3.userevent.nano.LauncherLogProto.Action.Touch;
-import com.android.launcher3.userevent.nano.LauncherLogProto.ContainerType;
+import com.android.launcher3x.AbstractFloatingView;
+import com.android.launcher3x.DeviceProfile;
+import com.android.launcher3x.Launcher;
+import com.android.launcher3x.LauncherState;
+import com.android.launcher3x.LauncherStateManager.AnimationComponents;
+import com.android.launcher3x.allapps.AllAppsTransitionController;
+import com.android.launcher3x.anim.AnimatorPlaybackController;
+import com.android.launcher3x.anim.AnimatorSetBuilder;
+import com.android.launcher3x.anim.Interpolators;
+import com.android.launcher3x.touch.AbstractStateChangeTouchController;
+import com.android.launcher3x.touch.SwipeDetector;
+import com.android.launcher3x.userevent.nano.LauncherLogProto.Action.Touch;
+import com.android.launcher3x.userevent.nano.LauncherLogProto.ContainerType;
 import com.android.quickstep.RecentsModel;
 import com.android.quickstep.TouchInteractionService;
 import com.android.quickstep.views.RecentsView;

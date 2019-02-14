@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3.uioverrides;
+package com.android.launcher3x.uioverrides;
 
-import static com.android.launcher3.LauncherAnimUtils.SCALE_PROPERTY;
-import static com.android.launcher3.LauncherState.FAST_OVERVIEW;
-import static com.android.launcher3.LauncherState.OVERVIEW;
-import static com.android.launcher3.anim.AnimatorSetBuilder.ANIM_OVERVIEW_FADE;
-import static com.android.launcher3.anim.AnimatorSetBuilder.ANIM_OVERVIEW_SCALE;
-import static com.android.launcher3.anim.Interpolators.AGGRESSIVE_EASE_IN_OUT;
-import static com.android.launcher3.anim.Interpolators.LINEAR;
+import static com.android.launcher3x.LauncherAnimUtils.SCALE_PROPERTY;
+import static com.android.launcher3x.LauncherState.FAST_OVERVIEW;
+import static com.android.launcher3x.LauncherState.OVERVIEW;
+import static com.android.launcher3x.anim.AnimatorSetBuilder.ANIM_OVERVIEW_FADE;
+import static com.android.launcher3x.anim.AnimatorSetBuilder.ANIM_OVERVIEW_SCALE;
+import static com.android.launcher3x.anim.Interpolators.AGGRESSIVE_EASE_IN_OUT;
+import static com.android.launcher3x.anim.Interpolators.LINEAR;
 import static com.android.quickstep.QuickScrubController.QUICK_SCRUB_START_INTERPOLATOR;
 import static com.android.quickstep.QuickScrubController.QUICK_SCRUB_TRANSLATION_Y_FACTOR;
 import static com.android.quickstep.views.LauncherRecentsView.TRANSLATION_Y_FACTOR;
@@ -32,13 +32,13 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.view.animation.Interpolator;
 
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherState;
-import com.android.launcher3.LauncherStateManager.AnimationConfig;
-import com.android.launcher3.LauncherStateManager.StateHandler;
-import com.android.launcher3.anim.AnimatorSetBuilder;
-import com.android.launcher3.anim.Interpolators;
-import com.android.launcher3.anim.PropertySetter;
+import com.android.launcher3x.Launcher;
+import com.android.launcher3x.LauncherState;
+import com.android.launcher3x.LauncherStateManager.AnimationConfig;
+import com.android.launcher3x.LauncherStateManager.StateHandler;
+import com.android.launcher3x.anim.AnimatorSetBuilder;
+import com.android.launcher3x.anim.Interpolators;
+import com.android.launcher3x.anim.PropertySetter;
 import com.android.quickstep.views.LauncherRecentsView;
 
 @TargetApi(Build.VERSION_CODES.O)

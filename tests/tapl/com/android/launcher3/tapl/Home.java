@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.tapl;
+package com.android.launcher3x.tapl;
 
 import static junit.framework.TestCase.assertTrue;
 

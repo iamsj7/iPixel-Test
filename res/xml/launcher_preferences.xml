@@ -17,7 +17,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="@string/home_category_title"/>
-        <com.android.launcher3.views.ButtonPreference
+        <com.android.launcher3x.views.ButtonPreference
         android:key="pref_icon_badging"
         android:title="@string/icon_badging_title"
         android:icon="@drawable/notifications_dots"
@@ -29,7 +29,7 @@
                 android:name=":settings:fragment_args_key"
                 android:value="notification_badging" />
         </intent>
-        </com.android.launcher3.views.ButtonPreference>
+        </com.android.launcher3x.views.ButtonPreference>
 
     <SwitchPreference
         android:defaultValue="true"

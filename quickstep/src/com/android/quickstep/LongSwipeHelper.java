@@ -15,32 +15,32 @@
  */
 package com.android.quickstep;
 
-import static com.android.launcher3.LauncherAnimUtils.MIN_PROGRESS_TO_ALL_APPS;
-import static com.android.launcher3.LauncherState.ALL_APPS;
-import static com.android.launcher3.LauncherState.OVERVIEW;
-import static com.android.launcher3.anim.Interpolators.DEACCEL;
+import static com.android.launcher3x.LauncherAnimUtils.MIN_PROGRESS_TO_ALL_APPS;
+import static com.android.launcher3x.LauncherState.ALL_APPS;
+import static com.android.launcher3x.LauncherState.OVERVIEW;
+import static com.android.launcher3x.anim.Interpolators.DEACCEL;
 import static com.android.quickstep.WindowTransformSwipeHandler.MAX_SWIPE_DURATION;
 import static com.android.quickstep.WindowTransformSwipeHandler.MIN_OVERSHOOT_DURATION;
 
 import android.animation.ValueAnimator;
 import android.view.animation.Interpolator;
 
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherAnimUtils;
-import com.android.launcher3.LauncherStateManager;
-import com.android.launcher3.R;
-import com.android.launcher3.Utilities;
-import com.android.launcher3.allapps.AllAppsTransitionController;
-import com.android.launcher3.allapps.DiscoveryBounce;
-import com.android.launcher3.anim.AnimatorPlaybackController;
-import com.android.launcher3.anim.AnimatorSetBuilder;
-import com.android.launcher3.anim.Interpolators;
-import com.android.launcher3.anim.Interpolators.OvershootParams;
-import com.android.launcher3.uioverrides.PortraitStatesTouchController;
-import com.android.launcher3.userevent.nano.LauncherLogProto.Action.Direction;
-import com.android.launcher3.userevent.nano.LauncherLogProto.Action.Touch;
-import com.android.launcher3.userevent.nano.LauncherLogProto.ContainerType;
-import com.android.launcher3.util.FlingBlockCheck;
+import com.android.launcher3x.Launcher;
+import com.android.launcher3x.LauncherAnimUtils;
+import com.android.launcher3x.LauncherStateManager;
+import com.android.launcher3x.R;
+import com.android.launcher3x.Utilities;
+import com.android.launcher3x.allapps.AllAppsTransitionController;
+import com.android.launcher3x.allapps.DiscoveryBounce;
+import com.android.launcher3x.anim.AnimatorPlaybackController;
+import com.android.launcher3x.anim.AnimatorSetBuilder;
+import com.android.launcher3x.anim.Interpolators;
+import com.android.launcher3x.anim.Interpolators.OvershootParams;
+import com.android.launcher3x.uioverrides.PortraitStatesTouchController;
+import com.android.launcher3x.userevent.nano.LauncherLogProto.Action.Direction;
+import com.android.launcher3x.userevent.nano.LauncherLogProto.Action.Touch;
+import com.android.launcher3x.userevent.nano.LauncherLogProto.ContainerType;
+import com.android.launcher3x.util.FlingBlockCheck;
 import com.android.quickstep.util.RemoteAnimationTargetSet;
 import com.android.quickstep.views.RecentsView;
 import com.android.systemui.shared.system.RemoteAnimationTargetCompat;

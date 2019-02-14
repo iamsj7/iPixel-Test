@@ -21,9 +21,9 @@ import android.graphics.Matrix;
 import android.support.annotation.AnyThread;
 import android.view.View;
 
-import com.android.launcher3.R;
-import com.android.launcher3.Utilities;
-import com.android.launcher3.util.Preconditions;
+import com.android.launcher3x.R;
+import com.android.launcher3x.Utilities;
+import com.android.launcher3x.util.Preconditions;
 import com.android.systemui.shared.recents.model.Task;
 import com.android.systemui.shared.recents.model.ThumbnailData;
 

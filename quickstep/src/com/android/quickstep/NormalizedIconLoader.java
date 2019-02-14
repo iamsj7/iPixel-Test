@@ -27,10 +27,10 @@ import android.os.UserHandle;
 import android.util.LruCache;
 import android.util.SparseArray;
 
-import com.android.launcher3.FastBitmapDrawable;
-import com.android.launcher3.graphics.BitmapInfo;
-import com.android.launcher3.graphics.DrawableFactory;
-import com.android.launcher3.graphics.LauncherIcons;
+import com.android.launcher3x.FastBitmapDrawable;
+import com.android.launcher3x.graphics.BitmapInfo;
+import com.android.launcher3x.graphics.DrawableFactory;
+import com.android.launcher3x.graphics.LauncherIcons;
 import com.android.systemui.shared.recents.model.IconLoader;
 import com.android.systemui.shared.recents.model.TaskKeyLruCache;
 

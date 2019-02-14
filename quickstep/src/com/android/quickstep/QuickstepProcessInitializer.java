@@ -17,7 +17,7 @@ package com.android.quickstep;
 
 import android.content.Context;
 
-import com.android.launcher3.MainProcessInitializer;
+import com.android.launcher3x.MainProcessInitializer;
 import com.android.systemui.shared.system.ThreadedRendererCompat;
 
 @SuppressWarnings("unused")

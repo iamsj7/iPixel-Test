@@ -19,7 +19,7 @@ import android.animation.AnimatorSet;
 import android.app.ActivityOptions;
 import android.os.Handler;
 
-import com.android.launcher3.LauncherAnimationRunner;
+import com.android.launcher3x.LauncherAnimationRunner;
 import com.android.systemui.shared.system.ActivityOptionsCompat;
 import com.android.systemui.shared.system.RemoteAnimationAdapterCompat;
 import com.android.systemui.shared.system.RemoteAnimationTargetCompat;

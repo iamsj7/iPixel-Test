@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3;
+package com.android.launcher3x;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -23,7 +23,7 @@ import android.os.Bundle;
 import android.os.CancellationSignal;
 import android.os.Handler;
 
-import com.android.launcher3.states.InternalStateHandler;
+import com.android.launcher3x.states.InternalStateHandler;
 import com.android.quickstep.ActivityControlHelper.ActivityInitListener;
 import com.android.quickstep.OverviewCallbacks;
 import com.android.quickstep.util.RemoteAnimationProvider;

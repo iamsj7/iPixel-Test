@@ -36,9 +36,9 @@ import android.util.LruCache;
 import android.util.SparseArray;
 import android.view.accessibility.AccessibilityManager;
 
-import com.android.launcher3.MainThreadExecutor;
-import com.android.launcher3.R;
-import com.android.launcher3.util.Preconditions;
+import com.android.launcher3x.MainThreadExecutor;
+import com.android.launcher3x.R;
+import com.android.launcher3x.util.Preconditions;
 import com.android.systemui.shared.recents.ISystemUiProxy;
 import com.android.systemui.shared.recents.model.IconLoader;
 import com.android.systemui.shared.recents.model.RecentsTaskLoadPlan;

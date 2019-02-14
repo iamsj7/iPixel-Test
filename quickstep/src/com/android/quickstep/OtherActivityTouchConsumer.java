@@ -46,8 +46,8 @@ import android.view.VelocityTracker;
 import android.view.ViewConfiguration;
 import android.view.WindowManager;
 
-import com.android.launcher3.MainThreadExecutor;
-import com.android.launcher3.util.TraceHelper;
+import com.android.launcher3x.MainThreadExecutor;
+import com.android.launcher3x.util.TraceHelper;
 import com.android.quickstep.util.RemoteAnimationTargetSet;
 import com.android.systemui.shared.system.ActivityManagerWrapper;
 import com.android.systemui.shared.system.AssistDataReceiver;

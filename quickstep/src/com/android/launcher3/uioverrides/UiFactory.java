@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.uioverrides;
+package com.android.launcher3x.uioverrides;
 
 import static android.view.View.VISIBLE;
-import static com.android.launcher3.AbstractFloatingView.TYPE_ALL;
-import static com.android.launcher3.AbstractFloatingView.TYPE_HIDE_BACK_BUTTON;
-import static com.android.launcher3.LauncherAnimUtils.SCALE_PROPERTY;
-import static com.android.launcher3.LauncherState.ALL_APPS;
-import static com.android.launcher3.LauncherState.NORMAL;
-import static com.android.launcher3.LauncherState.OVERVIEW;
-import static com.android.launcher3.allapps.DiscoveryBounce.HOME_BOUNCE_SEEN;
-import static com.android.launcher3.allapps.DiscoveryBounce.SHELF_BOUNCE_SEEN;
+import static com.android.launcher3x.AbstractFloatingView.TYPE_ALL;
+import static com.android.launcher3x.AbstractFloatingView.TYPE_HIDE_BACK_BUTTON;
+import static com.android.launcher3x.LauncherAnimUtils.SCALE_PROPERTY;
+import static com.android.launcher3x.LauncherState.ALL_APPS;
+import static com.android.launcher3x.LauncherState.NORMAL;
+import static com.android.launcher3x.LauncherState.OVERVIEW;
+import static com.android.launcher3x.allapps.DiscoveryBounce.HOME_BOUNCE_SEEN;
+import static com.android.launcher3x.allapps.DiscoveryBounce.SHELF_BOUNCE_SEEN;
 
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
@@ -33,16 +33,16 @@ import android.content.Context;
 import android.os.CancellationSignal;
 import android.util.Base64;
 
-import com.android.launcher3.AbstractFloatingView;
-import com.android.launcher3.DeviceProfile;
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherAppTransitionManagerImpl;
-import com.android.launcher3.LauncherState;
-import com.android.launcher3.LauncherStateManager;
-import com.android.launcher3.LauncherStateManager.StateHandler;
-import com.android.launcher3.Utilities;
-import com.android.launcher3.anim.AnimatorPlaybackController;
-import com.android.launcher3.util.TouchController;
+import com.android.launcher3x.AbstractFloatingView;
+import com.android.launcher3x.DeviceProfile;
+import com.android.launcher3x.Launcher;
+import com.android.launcher3x.LauncherAppTransitionManagerImpl;
+import com.android.launcher3x.LauncherState;
+import com.android.launcher3x.LauncherStateManager;
+import com.android.launcher3x.LauncherStateManager.StateHandler;
+import com.android.launcher3x.Utilities;
+import com.android.launcher3x.anim.AnimatorPlaybackController;
+import com.android.launcher3x.util.TouchController;
 import com.android.quickstep.OverviewInteractionState;
 import com.android.quickstep.RecentsModel;
 import com.android.quickstep.util.RemoteFadeOutAnimationListener;

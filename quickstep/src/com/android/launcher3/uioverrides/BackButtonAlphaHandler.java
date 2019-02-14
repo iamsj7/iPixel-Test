@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.uioverrides;
+package com.android.launcher3x.uioverrides;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherState;
-import com.android.launcher3.LauncherStateManager;
-import com.android.launcher3.anim.AnimatorSetBuilder;
+import com.android.launcher3x.Launcher;
+import com.android.launcher3x.LauncherState;
+import com.android.launcher3x.LauncherStateManager;
+import com.android.launcher3x.anim.AnimatorSetBuilder;
 import com.android.quickstep.OverviewInteractionState;
 
 public class BackButtonAlphaHandler implements LauncherStateManager.StateHandler {

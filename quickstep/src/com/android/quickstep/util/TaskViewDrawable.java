@@ -25,7 +25,7 @@ import android.graphics.drawable.Drawable;
 import android.util.FloatProperty;
 import android.view.View;
 
-import com.android.launcher3.Utilities;
+import com.android.launcher3x.Utilities;
 import com.android.quickstep.views.RecentsView;
 import com.android.quickstep.views.TaskThumbnailView;
 import com.android.quickstep.views.TaskView;
